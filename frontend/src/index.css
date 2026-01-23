@@ -1,3 +1,5 @@
+/* ---------------- GLOBAL ---------------- */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -12,29 +14,80 @@ code {
     monospace;
 }
 
-.nav-link{
+.nav-link {
   margin-left: 40px;
 }
 
-#supportHero{
+/* ---------------- SUPPORT PAGE ---------------- */
+
+#supportHero {
   background-color: rgb(56, 126, 209);
   color: white;
 }
 
-#supportHero a{
+/* Buttons replacing anchor tags (Hero section) */
+#supportHero button {
+  background: none;
+  border: none;
+  padding: 0;
   color: white;
+  cursor: pointer;
+  text-decoration: underline;
+  font: inherit;
 }
 
-#supportWrapper{
+/* Layout wrapper */
+#supportWrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 150px;
 }
 
-#supportHero input{
+/* Search input */
+#supportHero input {
   padding: 20px 50px;
   width: 100%;
   font-size: 20px;
   border-radius: 10px;
   border: none;
+  outline: none;
+}
+
+/* ---------------- CREATE TICKET LINKS ---------------- */
+
+/* Reusable link-styled button */
+.support-link {
+  display: block;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 6px 0;
+  color: #387ed1;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Hover & focus for accessibility */
+.support-link:hover,
+#supportHero button:hover {
+  opacity: 0.85;
+}
+
+.support-link:focus,
+#supportHero button:focus {
+  outline: 2px solid rgba(56, 126, 209, 0.6);
+  outline-offset: 2px;
+}
+
+/* ---------------- LIST CLEANUP ---------------- */
+
+ol {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
 }
