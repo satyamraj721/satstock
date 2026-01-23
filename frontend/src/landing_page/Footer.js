@@ -21,47 +21,47 @@ function Footer() {
           {/* Company */}
           <div className="col">
             <p>Company</p>
-            <a href="">About</a>
+            <a href="#!">About</a>
             <br />
-            <a href="">Products</a>
+            <a href="#!">Products</a>
             <br />
-            <a href="">Pricing</a>
+            <a href="#!">Pricing</a>
             <br />
-            <a href="">Referral Program</a>
+            <a href="#!">Referral Program</a>
             <br />
-            <a href="">Careers</a>
+            <a href="#!">Careers</a>
             <br />
-            <a href="">SatStock Tech</a>
+            <a href="#!">SatStock Tech</a>
             <br />
-            <a href="">Press & Media</a>
+            <a href="#!">Press & Media</a>
             <br />
-            <a href="">Corporate Responsibility</a>
+            <a href="#!">Corporate Responsibility</a>
             <br />
           </div>
 
           {/* Support */}
           <div className="col">
             <p>Support</p>
-            <a href="">Contact Us</a>
+            <a href="#!">Contact Us</a>
             <br />
-            <a href="">Help Center</a>
+            <a href="#!">Help Center</a>
             <br />
-            <a href="">Blog</a>
+            <a href="#!">Blog</a>
             <br />
-            <a href="">Charges & Fees</a>
+            <a href="#!">Charges & Fees</a>
             <br />
-            <a href="">Downloads & Resources</a>
+            <a href="#!">Downloads & Resources</a>
             <br />
           </div>
 
           {/* Account */}
           <div className="col">
             <p>Account</p>
-            <a href="">Open an Account</a>
+            <a href="#!">Open an Account</a>
             <br />
-            <a href="">Fund Transfer</a>
+            <a href="#!">Fund Transfer</a>
             <br />
-            <a href="">Trading Challenge</a>
+            <a href="#!">Trading Challenge</a>
             <br />
           </div>
         </div>
