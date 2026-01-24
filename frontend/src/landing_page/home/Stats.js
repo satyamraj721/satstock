@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Stats() {
     return (  
@@ -41,8 +42,8 @@ function Stats() {
                     />
                     <div className='text-center' >
  
-                        <a href=" " className='mx-5' style={{textDecoration:"none"}}> Explore our products  <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                        <a href = " " style={{textDecoration:"none"}}> try kite demo  <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        <Link to="/product" className='mx-5' style={{textDecoration:"none"}}> Explore our products  <i className="fa fa-long-arrow-right" aria-hidden="true"></i></Link>
+                        <Link to="/product" style={{textDecoration:"none"}}> try kite demo  <i className="fa fa-long-arrow-right" aria-hidden="true"></i></Link>
 
                         </div>
 

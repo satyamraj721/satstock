@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -21,47 +22,47 @@ function Footer() {
           {/* Company */}
           <div className="col">
             <p>Company</p>
-            <a href="#!">About</a>
+            <Link to="/about">About</Link>
             <br />
-            <a href="#!">Products</a>
+            <Link to="/product">Products</Link>
             <br />
-            <a href="#!">Pricing</a>
+            <Link to="/pricing">Pricing</Link>
             <br />
-            <a href="#!">Referral Program</a>
+            <button type="button">Referral Program</button>
             <br />
-            <a href="#!">Careers</a>
+            <button type="button">Careers</button>
             <br />
-            <a href="#!">SatStock Tech</a>
+            <button type="button">SatStock Tech</button>
             <br />
-            <a href="#!">Press & Media</a>
+            <button type="button">Press & Media</button>
             <br />
-            <a href="#!">Corporate Responsibility</a>
+            <button type="button">Corporate Responsibility</button>
             <br />
           </div>
 
           {/* Support */}
           <div className="col">
             <p>Support</p>
-            <a href="#!">Contact Us</a>
+            <Link to="/support">Contact Us</Link>
             <br />
-            <a href="#!">Help Center</a>
+            <Link to="/support">Help Center</Link>
             <br />
-            <a href="#!">Blog</a>
+            <button type="button">Blog</button>
             <br />
-            <a href="#!">Charges & Fees</a>
+            <button type="button">Charges & Fees</button>
             <br />
-            <a href="#!">Downloads & Resources</a>
+            <button type="button">Downloads & Resources</button>
             <br />
           </div>
 
           {/* Account */}
           <div className="col">
             <p>Account</p>
-            <a href="#!">Open an Account</a>
+            <Link to="/signup">Open an Account</Link>
             <br />
-            <a href="#!">Fund Transfer</a>
+            <button type="button">Fund Transfer</button>
             <br />
-            <a href="#!">Trading Challenge</a>
+            <button type="button">Trading Challenge</button>
             <br />
           </div>
         </div>

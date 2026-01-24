@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Orders = () => {
   const [allOrders, setAllOrders] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchOrders = async () => {
-    try {
-      const res = await axios.get("http://localhost:5000/allOrders");
-      setAllOrders(res.data);
-    } catch (error) {
-      console.error("Error fetching orders:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
+    const fetchOrders = async () => {
+      try {
+        const res = await axios.get("http://localhost:5000/allOrders");
+        setAllOrders(res.data);
+      } catch (error) {
+        setAllOrders([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchOrders();
   }, []);
 
@@ -29,9 +30,9 @@ const Orders = () => {
       <div className="orders">
         <div className="no-orders">
           <p>You haven't placed any orders today</p>
-          <button className="btn" onClick={() => window.location.href = "/"}>
+          <Link className="btn" to="/">
             Get started
-          </button>
+          </Link>
         </div>
       </div>
     );

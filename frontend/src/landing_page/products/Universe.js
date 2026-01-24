@@ -13,7 +13,7 @@ function Universe() {
         <div className="col-4 p-3 mt-5">
           <img
             src="media/images/smallcaseLogo.png"
-            alt="Smallcase logo"
+            alt=""
             className="img-fluid"
           />
           <p className="text-small text-muted">
@@ -24,7 +24,7 @@ function Universe() {
         <div className="col-4 p-3 mt-5">
           <img
             src="media/images/smallcaseLogo.png"
-            alt="Smallcase logo"
+            alt=""
             className="img-fluid"
           />
           <p className="text-small text-muted">
@@ -35,7 +35,7 @@ function Universe() {
         <div className="col-4 p-3 mt-5">
           <img
             src="media/images/smallcaseLogo.png"
-            alt="Smallcase logo"
+            alt=""
             className="img-fluid"
           />
           <p className="text-small text-muted">
@@ -46,7 +46,7 @@ function Universe() {
         <div className="col-4 p-3 mt-5">
           <img
             src="media/images/smallcaseLogo.png"
-            alt="Smallcase logo"
+            alt=""
             className="img-fluid"
           />
           <p className="text-small text-muted">
@@ -57,7 +57,7 @@ function Universe() {
         <div className="col-4 p-3 mt-5">
           <img
             src="media/images/smallcaseLogo.png"
-            alt="Smallcase logo"
+            alt=""
             className="img-fluid"
           />
           <p className="text-small text-muted">
@@ -68,7 +68,7 @@ function Universe() {
         <div className="col-4 p-3 mt-5">
           <img
             src="media/images/smallcaseLogo.png"
-            alt="Smallcase logo"
+            alt=""
             className="img-fluid"
           />
           <p className="text-small text-muted">

@@ -6,18 +6,18 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchHoldings = async () => {
-    try {
-      const res = await axios.get("http://localhost:5000/allHoldings");
-      setAllHoldings(res.data);
-    } catch (error) {
-      console.error("Error fetching holdings:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
+    const fetchHoldings = async () => {
+      try {
+        const res = await axios.get("http://localhost:5000/allHoldings");
+        setAllHoldings(res.data);
+      } catch (error) {
+        setAllHoldings([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchHoldings();
   }, []);
 

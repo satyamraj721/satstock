@@ -9,7 +9,6 @@ const SellActionWindow = ({ uid }) => {
   const { closeSellWindow } = useContext(GeneralContext);
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
-  const [loadingPrice, setLoadingPrice] = useState(true);
 
   useEffect(() => {
     const fetchStockPrice = async () => {
@@ -18,10 +17,7 @@ const SellActionWindow = ({ uid }) => {
         const response = await axios.get(`http://localhost:5000/api/stock/${uid}`);
         setStockPrice(response.data.price);
       } catch (error) {
-        console.error("Error fetching stock price:", error);
         alert("Failed to fetch current stock price. Please enter manually.");
-      } finally {
-        setLoadingPrice(false);
       }
     };
 
@@ -30,17 +26,22 @@ const SellActionWindow = ({ uid }) => {
 
   const handleSellClick = async () => {
     try {
+      const qty = parseInt(stockQuantity, 10);
+      const price = parseFloat(stockPrice);
+      if (Number.isNaN(qty) || qty <= 0 || Number.isNaN(price) || price <= 0) {
+        alert("Invalid quantity or price");
+        return;
+      }
       await axios.post("http://localhost:5000/newOrder", {
         name: uid,
-        qty: stockQuantity,
-        price: stockPrice,
+        qty,
+        price,
         mode: "SELL",
       });
       alert("Sell order placed successfully!");
       closeSellWindow();
     } catch (error) {
-      console.error("Error placing sell order:", error);
-      alert("Failed to place sell order. Check console for details.");
+      alert("Failed to place sell order. Please try again later.");
     }
   };
 

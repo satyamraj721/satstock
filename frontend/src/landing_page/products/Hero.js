@@ -14,6 +14,7 @@ function Hero() {
         <button
           type="button"
           className="link-button"
+          aria-label="View investment offerings"
         >
           investment offering{" "}
           <i className="fa fa-arrow-right" aria-hidden="true"></i>

@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Pricing() {
   return (
@@ -13,13 +14,12 @@ function Pricing() {
             intraday, F&O, and currency trades, with zero charges for equity delivery
           </p>
 
-          <a
-            href="#"
+          <Link
+            to="/pricing"
             style={{ textDecoration: "none" }}
           >
-            See pricing{" "}
-            <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
-          </a>
+            See pricing <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
+          </Link>
         </div>
 
         <div className="col-2"></div>

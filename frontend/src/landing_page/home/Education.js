@@ -19,25 +19,23 @@ function Education() {
             Varsity, the largest online stock trading education platform
           </p>
 
-          <a
-            href="#"
-            onClick={(e) => e.preventDefault()}
-            style={{ textDecoration: "none" }}
+          <button
+            type="button"
+            style={{ textDecoration: "none", background: "transparent", border: "none", padding: 0 }}
           >
             Varsity <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
-          </a>
+          </button>
 
           <p className="mt-3">
             TradingQ&A, a community-driven question and answer platform for traders and investors   
            </p>
 
-          <a
-            href="#"
-            onClick={(e) => e.preventDefault()}
-            style={{ textDecoration: "none" }}
+          <button
+            type="button"
+            style={{ textDecoration: "none", background: "transparent", border: "none", padding: 0 }}
           >
             Trading Q&A <i className="fa fa-long-arrow-right" aria-hidden="true"></i>
-          </a>
+          </button>
         </div>
 
       </div>

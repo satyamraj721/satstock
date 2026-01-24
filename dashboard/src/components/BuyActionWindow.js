@@ -1,5 +1,4 @@
 import React, { useState, useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 import axios from "axios";
 
@@ -11,7 +10,6 @@ const BuyActionWindow = ({ uid }) => {
   const { closeBuyWindow } = useContext(GeneralContext);
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
-  const [loadingPrice, setLoadingPrice] = useState(true);
 
   useEffect(() => {
     const fetchStockPrice = async () => {
@@ -20,10 +18,7 @@ const BuyActionWindow = ({ uid }) => {
         const response = await axios.get(`http://localhost:5000/api/stock/${uid}`);
         setStockPrice(response.data.price);
       } catch (error) {
-        console.error("Error fetching stock price:", error);
         alert("Failed to fetch current stock price. Please enter manually.");
-      } finally {
-        setLoadingPrice(false);
       }
     };
 
@@ -47,8 +42,7 @@ const BuyActionWindow = ({ uid }) => {
       alert("Order placed successfully!");
       closeBuyWindow();
     } catch (error) {
-      console.error("Error placing order:", error);
-      alert("Failed to place order. Check console for details.");
+      alert("Failed to place order. Please try again later.");
     }
   };
 

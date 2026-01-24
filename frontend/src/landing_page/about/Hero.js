@@ -1,4 +1,4 @@
-  import React from "react";
+import React from "react";
 
 function Hero() {
   return (
@@ -39,9 +39,9 @@ function Hero() {
             community initiatives to empower retail traders and investors.
           </p>
           <p>
-            <a href="" style={{ textDecoration: "none" }}>
+            <button type="button" style={{ textDecoration: "none", background: "transparent", border: "none", padding: 0 }}>
               Rainmatter
-            </a>
+            </button>
             , our fintech fund and incubator, has invested in several fintech
             startups with the goal of growing the Indian capital markets.
           </p>

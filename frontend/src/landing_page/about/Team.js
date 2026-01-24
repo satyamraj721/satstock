@@ -15,6 +15,7 @@ function Team() {
           <img
             src="media/images/SATYAM RAJ.png"
             style={{ borderRadius: "100%", width: "50%" }}
+            alt="Satyam Raj portrait"
           />
           <h4 className="mt-5">SATYAM RAJ</h4>
           <h6>Founder, CEO</h6>
@@ -31,8 +32,8 @@ function Team() {
           </p>
           <p>Playing basketball is his zen.</p>
           <p>
-            Connect on <a href="">Homepage</a> / <a href="">TradingQnA</a> /{" "}
-            <a href="">Twitter</a>
+            Connect on <button type="button">Homepage</button> / <button type="button">TradingQnA</button> / {" "}
+            <button type="button">Twitter</button>
           </p>
         </div>
       </div>
