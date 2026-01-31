@@ -7,7 +7,8 @@ in a simulated trading environment.
 This project is built for learning full-stack development using the MERN stack.
 
 ---
-
+link - https://satstock-xo91.vercel.app/
+link  holdinng - https://satstock-gamma.vercel.app/
 ## 🚀 Tech Stack
 
 ### Frontend
