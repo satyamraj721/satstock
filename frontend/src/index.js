@@ -21,23 +21,19 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <div className="app-layout">
-        <Navbar />
+      <Navbar />
 
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/product" element={<ProductPage />} />
-            <Route path="/pricing" element={<PricingPage />} />
-            <Route path="/support" element={<SupportPage />} />
-            <Route path="/signup" element={<SignupPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-        </main>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/products" element={<ProductPage />} /> {/* ✅ FIX */}
+        <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/support" element={<SupportPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
 
-        <Footer />
-      </div>
+      <Footer />
     </BrowserRouter>
   </React.StrictMode>
 );
