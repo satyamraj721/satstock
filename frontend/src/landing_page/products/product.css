@@ -1,4 +1,7 @@
 /* ========= PRODUCT PAGE – NUCLEAR RESET ========= */
+.product-page {
+  border: 5px solid red;
+}
 
 .product-page * {
   box-shadow: none !important;
