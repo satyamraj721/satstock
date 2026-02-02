@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./product.css"; // uses same product styles
 
 function Hero() {
   return (
@@ -11,14 +13,10 @@ function Hero() {
 
       <p className="mt-3">
         Check out our{" "}
-        <button
-          type="button"
-          className="link-button"
-          aria-label="View investment offerings"
-        >
+        <Link to="/products" className="product-link">
           investment offering{" "}
           <i className="fa fa-arrow-right" aria-hidden="true"></i>
-        </button>
+        </Link>
       </p>
     </div>
   );
