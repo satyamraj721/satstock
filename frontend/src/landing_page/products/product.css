@@ -1,4 +1,8 @@
-/* ================= PRODUCT PAGE RESET ================= */
+/* ========= PRODUCT PAGE – NUCLEAR RESET ========= */
+
+.product-page * {
+  box-shadow: none !important;
+}
 
 .product-page button,
 .product-page a,
@@ -8,36 +12,27 @@
   border: none !important;
   padding: 0 !important;
   margin: 0 !important;
-  box-shadow: none !important;
   outline: none !important;
+  box-shadow: none !important;
   font-family: inherit !important;
 }
 
-/* ================= PRODUCT LINKS ================= */
-
-.product-link {
+/* Links */
+.product-page a {
   color: #387ed1 !important;
-  font-weight: 500;
-  font-size: 15px;
-  cursor: pointer;
   text-decoration: none !important;
 }
 
-.product-link:hover {
+.product-page a:hover {
   text-decoration: underline !important;
   color: #1a5fb4 !important;
 }
 
-/* ================= CTA ================= */
-
+/* CTA */
 .product-cta {
-  display: inline-block;
-  margin: 40px auto;
-  padding: 12px 36px;
-  border-radius: 999px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff !important;
+  display: inline-block !important;
+  padding: 12px 36px !important;
   background: linear-gradient(135deg, #387ed1, #4f8ef7) !important;
-  box-shadow: 0 14px 30px rgba(56, 126, 209, 0.35) !important;
+  color: #fff !important;
+  border-radius: 999px !important;
 }
