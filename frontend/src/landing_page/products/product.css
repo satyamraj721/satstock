@@ -1,7 +1,4 @@
-/* ========= PRODUCT PAGE – NUCLEAR RESET ========= */
-.product-page {
-  border: 5px solid red;
-}
+/* ========= PRODUCT PAGE RESET ========= */
 
 .product-page * {
   box-shadow: none !important;
@@ -21,6 +18,7 @@
 }
 
 /* Links */
+
 .product-page a {
   color: #387ed1 !important;
   text-decoration: none !important;
@@ -32,6 +30,7 @@
 }
 
 /* CTA */
+
 .product-cta {
   display: inline-block !important;
   padding: 12px 36px !important;
