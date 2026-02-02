@@ -1,34 +1,33 @@
-/* ================= FOOTER RESET ================= */
+/* ================= GLOBAL RESET ================= */
 
-footer button {
-  all: unset;              /* removes border, bg, padding */
-  cursor: pointer;
-  font-family: inherit;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/* ================= FOOTER LINKS ================= */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: #222;
+  background-color: #fff;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  background-color: rgb(250, 250, 250);
+}
+
+/* ================= REMOVE ALL DEFAULT STYLES ================= */
 
 footer a,
 footer button {
-  display: inline-block;
-  font-size: 14px;
-  color: #387ed1;
-  line-height: 1.8;
-  margin: 2px 0;
-  text-decoration: none;
-}
-
-/* Hover effect (Zerodha-style) */
-footer a:hover,
-footer button:hover {
-  text-decoration: underline;
-  color: #1a5fb4;
-}
-
-/* Remove focus outlines */
-footer a:focus-visible,
-footer button:focus-visible {
-  outline: none;
+  all: unset;              /* removes bootstrap + default styles */
+  display: block;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 /* ================= FOOTER HEADINGS ================= */
@@ -40,16 +39,53 @@ footer p {
   margin-bottom: 10px;
 }
 
-/* ================= COPYRIGHT ================= */
+/* ================= FOOTER LINKS ================= */
 
-footer .col p:first-of-type {
-  font-weight: 600;
+footer a,
+footer button {
+  font-size: 14px;
+  color: #387ed1;
+  line-height: 1.8;
+  margin: 2px 0;
 }
 
-/* ================= DISCLAIMER TEXT ================= */
+/* Hover (Zerodha-style) */
+footer a:hover,
+footer button:hover {
+  color: #1a5fb4;
+  text-decoration: underline;
+}
+
+/* Remove focus borders */
+footer a:focus-visible,
+footer button:focus-visible {
+  outline: none;
+}
+
+/* ================= COPYRIGHT TEXT ================= */
+
+footer .col:first-child p {
+  font-weight: 400;
+  color: #444;
+}
+
+/* ================= DISCLAIMER ================= */
 
 footer .text-muted p {
   font-size: 13px;
+  font-weight: 400;
   color: #666;
   line-height: 1.7;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  footer .row {
+    row-gap: 2rem;
+  }
+
+  footer img {
+    width: 60% !important;
+  }
 }
