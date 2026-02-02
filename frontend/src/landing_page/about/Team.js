@@ -1,43 +1,47 @@
 import React from "react";
+import "./team.css";
 
 function Team() {
   return (
-    <div className="container">
-      <div className="row p-3 mt-5 border-top">
-        <h1 className="text-center ">People</h1>
+    <section className="team-section">
+      <div className="team-header">
+        <h1>People</h1>
       </div>
 
-      <div
-        className="row p-3 text-muted"
-        style={{ lineHeight: "1.8", fontSize: "1.2em" }}
-      >
-        <div className="col-6 p-3 text-center">
+      <div className="team-card">
+        <div className="team-left">
           <img
             src="media/images/SATYAM RAJ.png"
-            style={{ borderRadius: "100%", width: "50%" }}
-            alt="Satyam Raj portrait"
+            alt="Satyam Raj"
+            className="team-avatar"
           />
-          <h4 className="mt-5">SATYAM RAJ</h4>
+          <h4>SATYAM RAJ</h4>
           <h6>Founder, CEO</h6>
         </div>
-        <div className="col-6 p-3">
+
+        <div className="team-right">
           <p>
             SATYAM RAJ bootstrapped and founded SATSTOCK in 2025 to overcome the
-            hurdles he faced during his decade long stint as a trader. Today,
+            hurdles he faced during his decade-long stint as a trader. Today,
             SATSTOCK has changed the landscape of the Indian broking industry.
           </p>
+
           <p>
-            He is a member of the SEBI Secondary Market Advisory Committee
-            (SMAC) and the Market Data Advisory Committee (MDAC).
+            He is a member of the SEBI Secondary Market Advisory Committee (SMAC)
+            and the Market Data Advisory Committee (MDAC).
           </p>
+
           <p>Playing basketball is his zen.</p>
-          <p>
-            Connect on <button type="button">Homepage</button> / <button type="button">TradingQnA</button> / {" "}
-            <button type="button">Twitter</button>
+
+          <p className="team-links">
+            Connect on{" "}
+            <button className="team-link">Homepage</button> /{" "}
+            <button className="team-link">TradingQnA</button> /{" "}
+            <button className="team-link">Twitter</button>
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
