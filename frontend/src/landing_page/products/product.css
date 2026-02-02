@@ -1,54 +1,24 @@
-/* =====================================================
-   PRODUCT PAGE – ABSOLUTE FINAL FIX (BOOTSTRAP KILL)
-   ===================================================== */
-
-/* PAGE WRAPPER */
-.product-page {
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-/* 🔥 HARD RESET BOOTSTRAP (PRODUCT PAGE ONLY) */
-.product-page *,
-.product-page *::before,
-.product-page *::after {
-  box-shadow: none !important;
-}
+/* ================= PRODUCT PAGE RESET ================= */
 
 .product-page button,
+.product-page a,
 .product-page .btn,
-.product-page .btn-primary,
-.product-page a {
+.product-page .btn-primary {
   background: none !important;
   border: none !important;
   padding: 0 !important;
   margin: 0 !important;
-  outline: none !important;
   box-shadow: none !important;
+  outline: none !important;
   font-family: inherit !important;
 }
 
-/* HEADINGS */
-.product-page h1 {
-  font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 16px;
-  color: #0f172a;
-}
+/* ================= PRODUCT LINKS ================= */
 
-/* TEXT */
-.product-page p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #334155;
-}
-
-/* PRODUCT LINKS */
 .product-link {
-  font-size: 15px !important;
-  font-weight: 500;
   color: #387ed1 !important;
+  font-weight: 500;
+  font-size: 15px;
   cursor: pointer;
   text-decoration: none !important;
 }
@@ -58,50 +28,16 @@
   color: #1a5fb4 !important;
 }
 
-/* LINK SPACING */
-.product-links .product-link + .product-link {
-  margin-left: 50px;
-}
+/* ================= CTA ================= */
 
-/* STORE BADGES */
-.product-page a + a img {
-  margin-left: 50px;
-}
-
-/* CTA BUTTON (UNIVERSE) */
 .product-cta {
-  display: inline-block !important;
-  margin: 40px auto 0 !important;
-  padding: 12px 36px !important;
-  border-radius: 999px !important;
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  color: #ffffff !important;
+  display: inline-block;
+  margin: 40px auto;
+  padding: 12px 36px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff !important;
   background: linear-gradient(135deg, #387ed1, #4f8ef7) !important;
   box-shadow: 0 14px 30px rgba(56, 126, 209, 0.35) !important;
-  text-decoration: none !important;
-}
-
-.product-cta:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 18px 36px rgba(56, 126, 209, 0.45) !important;
-}
-
-/* FOOTER TEXT */
-.product-footer-text {
-  text-align: center;
-  margin: 60px 0;
-  font-size: 15px;
-  color: #334155;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .product-links .product-link + .product-link {
-    margin-left: 24px;
-  }
-
-  .product-page a + a img {
-    margin-left: 24px;
-  }
 }
