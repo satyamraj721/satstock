@@ -12,6 +12,7 @@ function Universe() {
           partner platforms
         </p>
 
+        {/* Partner platforms */}
         <div className="col-4 p-3 mt-5">
           <img
             src="media/images/smallcaseLogo.png"
