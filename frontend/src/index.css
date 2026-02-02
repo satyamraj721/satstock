@@ -1,109 +1,55 @@
-/* ================= GLOBAL ================= */
+/* ================= FOOTER RESET ================= */
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  color: #222;
-  background: #fff;
-}
-
-/* ================= FOOTER ================= */
-
-.footer {
-  max-width: 1200px;
-  margin: auto;
-  padding: 3rem 2rem;
-}
-
-/* Footer top layout */
-.footer-top {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3rem;
-}
-
-/* Logo & copyright */
-.footer-logo {
-  font-size: 14px;
-  color: #444;
-}
-
-.footer-logo img {
-  max-width: 120px;
-  margin-bottom: 12px;
-}
-
-/* Section titles */
-.footer h4 {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #000;
-}
-
-/* ================= LINKS (NO BOXES) ================= */
-
-/* Reset buttons used as links */
-.footer button {
-  all: unset;
-  display: block;
+footer button {
+  all: unset;              /* removes border, bg, padding */
   cursor: pointer;
-  font-size: 14px;
-  color: #387ed1;
-  margin: 6px 0;
-  line-height: 1.6;
+  font-family: inherit;
 }
 
-/* Anchor links */
-.footer a {
-  display: block;
+/* ================= FOOTER LINKS ================= */
+
+footer a,
+footer button {
+  display: inline-block;
   font-size: 14px;
   color: #387ed1;
+  line-height: 1.8;
+  margin: 2px 0;
   text-decoration: none;
-  margin: 6px 0;
-  line-height: 1.6;
 }
 
-/* Hover */
-.footer a:hover,
-.footer button:hover {
+/* Hover effect (Zerodha-style) */
+footer a:hover,
+footer button:hover {
   text-decoration: underline;
   color: #1a5fb4;
 }
 
-/* Remove focus box */
-.footer a:focus-visible,
-.footer button:focus-visible {
+/* Remove focus outlines */
+footer a:focus-visible,
+footer button:focus-visible {
   outline: none;
 }
 
-/* ================= DISCLAIMER ================= */
+/* ================= FOOTER HEADINGS ================= */
 
-.footer-disclaimer {
-  margin-top: 3rem;
-  font-size: 12px;
-  line-height: 1.6;
+footer p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* ================= COPYRIGHT ================= */
+
+footer .col p:first-of-type {
+  font-weight: 600;
+}
+
+/* ================= DISCLAIMER TEXT ================= */
+
+footer .text-muted p {
+  font-size: 13px;
   color: #666;
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 900px) {
-  .footer-top {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .footer-top {
-    grid-template-columns: 1fr;
-  }
+  line-height: 1.7;
 }
