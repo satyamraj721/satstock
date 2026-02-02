@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./product.css"; // uses same product styles
+import "./product.css";
 
 function Hero() {
   return (
