@@ -34,11 +34,12 @@ function Team() {
           <p>Playing basketball is his zen.</p>
 
           <p className="team-links">
-            Connect on{" "}
-            <button className="team-link">Homepage</button> /{" "}
-            <button className="team-link">TradingQnA</button> /{" "}
-            <button className="team-link">Twitter</button>
-          </p>
+  Connect on{" "}
+  <a href="#" className="team-link">Homepage</a> /{" "}
+  <a href="#" className="team-link">TradingQnA</a> /{" "}
+  <a href="#" className="team-link">Twitter</a>
+</p>
+
         </div>
       </div>
     </section>
