@@ -1,0 +1,92 @@
+/* ================= SUPPORT PAGE RESET ================= */
+
+.support-page button,
+.support-page a {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ================= PAGE LAYOUT ================= */
+
+.support-page {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Headings */
+.support-page h1,
+.support-page h2 {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* ================= SEARCH ================= */
+
+.support-page input {
+  width: 100%;
+  max-width: 520px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+}
+
+/* ================= FEATURED LINKS ================= */
+
+.support-page ol li {
+  margin: 8px 0;
+}
+
+.support-page ol li a {
+  color: #387ed1;
+  text-decoration: none;
+}
+
+.support-page ol li a:hover {
+  text-decoration: underline;
+}
+
+/* ================= SUPPORT TOPICS ================= */
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+
+/* Topic card */
+.support-topic {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.support-topic-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Topic links (NO BOXES) */
+.support-link {
+  font-size: 14px;
+  color: #387ed1;
+  padding: 6px 0;
+  text-decoration: none;
+}
+
+.support-link:hover {
+  text-decoration: underline;
+  color: #1a5fb4;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .support-grid {
+    grid-template-columns: 1fr;
+  }
+}
