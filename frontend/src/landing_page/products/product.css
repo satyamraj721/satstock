@@ -1,0 +1,50 @@
+/* ================= PRODUCT PAGE RESET ================= */
+
+/* Kill Bootstrap button/link styles ONLY on product page */
+.product-page button,
+.product-page a {
+  all: unset;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ================= PAGE LAYOUT ================= */
+
+.product-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ================= LINKS ================= */
+
+.product-page a,
+.product-page .product-link {
+  color: #387ed1;
+  font-size: 14px;
+}
+
+.product-page a:hover,
+.product-page .product-link:hover {
+  text-decoration: underline;
+  color: #1a5fb4;
+}
+
+/* ================= SAFETY OVERRIDE ================= */
+/* In case any button still sneaks in */
+
+.product-page button {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+/* ================= FOOTER TEXT ================= */
+
+.product-footer-text {
+  text-align: center;
+  margin: 60px 0;
+  font-size: 15px;
+  color: #334155;
+}
