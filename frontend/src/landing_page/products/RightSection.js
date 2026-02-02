@@ -4,20 +4,19 @@ function RightSection({ imageURL, productName, productDesription, learnMore }) {
   return (
     <div className="container mt-5">
       <div className="row align-items-center">
+        {/* Content */}
         <div className="col-6 p-5">
           <h1>{productName}</h1>
           <p>{productDesription}</p>
 
           <div className="product-links">
-            <a
-              href={learnMore || "#"}
-              className="product-link"
-            >
+            <a href={learnMore || "#"} className="product-link">
               Learn More
             </a>
           </div>
         </div>
 
+        {/* Image */}
         <div className="col-6">
           <img
             src={imageURL}
