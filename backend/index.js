@@ -55,4 +55,47 @@ app.get("/allPositions", async (req, res) => {
     const allPositions = await PositionsModel.find({});
     res.json(allPositions);
   } catch {
-    res.status(500).send("Error
+    res.status(500).send("Error fetching positions");
+  }
+});
+
+app.get("/allOrders", async (req, res) => {
+  try {
+    const allOrders = await OrdersModel.find({});
+    res.json(allOrders);
+  } catch {
+    res.status(500).send("Error fetching orders");
+  }
+});
+
+/* =======================
+   SIGNUP ROUTE (THIS IS THE KEY)
+======================= */
+app.post("/signup", async (req, res) => {
+  try {
+    const { email, username, password } = req.body;
+
+    if (!email || !username || !password) {
+      return res.status(400).json({ error: "All fields are required" });
+    }
+
+    const existingUser = await UserModel.findOne({ email });
+    if (existingUser) {
+      return res.status(409).json({ error: "User already exists" });
+    }
+
+    await UserModel.create({ email, username, password });
+
+    res.status(201).json({ message: "User registered successfully" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Signup failed" });
+  }
+});
+
+/* =======================
+   START SERVER
+======================= */
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
