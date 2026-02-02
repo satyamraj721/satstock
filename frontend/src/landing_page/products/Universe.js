@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./product.css";
 
 function Universe() {
   return (
@@ -13,7 +15,7 @@ function Universe() {
         <div className="col-4 p-3 mt-5">
           <img
             src="media/images/smallcaseLogo.png"
-            alt=""
+            alt="Smallcase"
             className="img-fluid"
           />
           <p className="text-small text-muted">
@@ -24,7 +26,7 @@ function Universe() {
         <div className="col-4 p-3 mt-5">
           <img
             src="media/images/smallcaseLogo.png"
-            alt=""
+            alt="Smallcase"
             className="img-fluid"
           />
           <p className="text-small text-muted">
@@ -35,7 +37,7 @@ function Universe() {
         <div className="col-4 p-3 mt-5">
           <img
             src="media/images/smallcaseLogo.png"
-            alt=""
+            alt="Smallcase"
             className="img-fluid"
           />
           <p className="text-small text-muted">
@@ -46,7 +48,7 @@ function Universe() {
         <div className="col-4 p-3 mt-5">
           <img
             src="media/images/smallcaseLogo.png"
-            alt=""
+            alt="Smallcase"
             className="img-fluid"
           />
           <p className="text-small text-muted">
@@ -57,7 +59,7 @@ function Universe() {
         <div className="col-4 p-3 mt-5">
           <img
             src="media/images/smallcaseLogo.png"
-            alt=""
+            alt="Smallcase"
             className="img-fluid"
           />
           <p className="text-small text-muted">
@@ -68,7 +70,7 @@ function Universe() {
         <div className="col-4 p-3 mt-5">
           <img
             src="media/images/smallcaseLogo.png"
-            alt=""
+            alt="Smallcase"
             className="img-fluid"
           />
           <p className="text-small text-muted">
@@ -76,12 +78,10 @@ function Universe() {
           </p>
         </div>
 
-        <button
-          className="p-2 btn btn-primary fs-5 mb-5"
-          style={{ width: "20%", margin: "0 auto" }}
-        >
+        {/* CTA */}
+        <Link to="/signup" className="product-cta">
           Signup Now
-        </button>
+        </Link>
       </div>
     </div>
   );
