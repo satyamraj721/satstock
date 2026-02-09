@@ -1,6 +1,72 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+const styles = {
+  page: {
+    minHeight: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    background: "#eef4ff",
+    padding: "48px 16px",
+  },
+  card: {
+    width: "100%",
+    maxWidth: "520px",
+    background: "#ffffff",
+    borderRadius: "20px",
+    padding: "40px",
+    boxShadow: "0 24px 48px rgba(15, 23, 42, 0.12)",
+  },
+  heading: {
+    margin: 0,
+    fontSize: "28px",
+    color: "#0f172a",
+  },
+  subText: {
+    marginTop: "8px",
+    marginBottom: "24px",
+    color: "#64748b",
+  },
+  field: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "8px",
+    marginBottom: "16px",
+    color: "#0f172a",
+  },
+  input: {
+    padding: "12px 14px",
+    borderRadius: "10px",
+    border: "1px solid #cbd5f5",
+    fontSize: "16px",
+  },
+  button: {
+    width: "100%",
+    marginTop: "8px",
+    padding: "12px 16px",
+    borderRadius: "12px",
+    border: "none",
+    background: "#3b82f6",
+    color: "#ffffff",
+    fontSize: "16px",
+    fontWeight: 600,
+    cursor: "pointer",
+    boxShadow: "0 12px 26px rgba(56, 126, 209, 0.35)",
+    transition: "transform 150ms ease, box-shadow 150ms ease",
+  },
+  success: {
+    marginTop: "16px",
+    color: "#16a34a",
+    fontWeight: 600,
+  },
+  error: {
+    marginTop: "16px",
+    color: "#dc2626",
+    fontWeight: 600,
+  },
+};
+
 function SignupPage() {
   const apiBaseUrl =
     process.env.REACT_APP_API_URL ||
