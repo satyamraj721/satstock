@@ -3,10 +3,7 @@ import axios from "axios";
 
 function SignupPage() {
   const resolvedApiBaseUrl =
-    process.env.REACT_APP_API_URL ||
-    (window.location.hostname === "localhost"
-      ? "http://localhost:5000"
-      : "https://satstock.onrender.com");
+    process.env.REACT_APP_API_URL || "https://satstock.onrender.com";
   const [formData, setFormData] = useState({
     email: "",
     username: "",
