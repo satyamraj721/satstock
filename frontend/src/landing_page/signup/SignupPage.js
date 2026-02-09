@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function SignupPage() {
-  const apiBaseUrl = process.env.REACT_APP_API_URL;
+  const apiBaseUrl =
+    process.env.REACT_APP_API_URL ||
+    "https://satstock.onrender.com";
   const [formData, setFormData] = useState({
     email: "",
     username: "",
@@ -20,11 +22,6 @@ function SignupPage() {
     e.preventDefault();
     setMessage("");
     setError("");
-
-    if (!apiBaseUrl) {
-      setError("Signup service is not configured. Please try again later.");
-      return;
-    }
 
     try {
       const response = await axios.post(
