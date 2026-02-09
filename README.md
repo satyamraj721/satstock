@@ -31,3 +31,10 @@ link  holdinng - https://satstock-gamma.vercel.app/
 
 ## 📂 Project Structure
 
+## 🔧 Environment Setup
+
+Create a frontend environment file to point the React app at the Render API:
+
+```
+cp frontend/.env.example frontend/.env
+```
