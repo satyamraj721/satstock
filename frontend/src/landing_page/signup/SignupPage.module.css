@@ -58,6 +58,11 @@
   transition: transform 150ms ease, box-shadow 150ms ease;
 }
 
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(56, 126, 209, 0.45);
+}
+
 .success {
   margin-top: 16px;
   color: #16a34a;

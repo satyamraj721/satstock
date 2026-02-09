@@ -45,18 +45,6 @@ function SignupPage() {
     }
   };
 
-  const handleHover = (e, type) => {
-    if (type === "enter") {
-      e.target.style.transform = "translateY(-2px)";
-      e.target.style.boxShadow =
-        "0 16px 32px rgba(56, 126, 209, 0.45)";
-    } else {
-      e.target.style.transform = "translateY(0)";
-      e.target.style.boxShadow =
-        "0 12px 26px rgba(56, 126, 209, 0.35)";
-    }
-  };
-
   return (
     <div className={styles.page}>
       <div className={styles.card}>
@@ -105,8 +93,6 @@ function SignupPage() {
           <button
             type="submit"
             className={styles.button}
-            onMouseEnter={(e) => handleHover(e, "enter")}
-            onMouseLeave={(e) => handleHover(e, "leave")}
           >
             Create Account
           </button>
