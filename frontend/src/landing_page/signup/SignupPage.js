@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
+import styles from "./SignupPage.module.css";
 
 function SignupPage() {
+  const apiBaseUrl =
+    process.env.REACT_APP_API_URL ||
+    "https://satstock.onrender.com";
   const [formData, setFormData] = useState({
     email: "",
     username: "",
@@ -22,39 +26,35 @@ function SignupPage() {
 
     try {
       const response = await axios.post(
-        "https://satstock.onrender.com/signup",
+        `${apiBaseUrl}/signup`,
         formData
       );
 
       setMessage(response.data.message);
       setFormData({ email: "", username: "", password: "" });
     } catch (err) {
-      setError(err.response?.data?.error || "Signup failed");
-    }
-  };
-
-  const handleHover = (e, type) => {
-    if (type === "enter") {
-      e.target.style.transform = "translateY(-2px)";
-      e.target.style.boxShadow =
-        "0 16px 32px rgba(56, 126, 209, 0.45)";
-    } else {
-      e.target.style.transform = "translateY(0)";
-      e.target.style.boxShadow =
-        "0 12px 26px rgba(56, 126, 209, 0.35)";
+      if (err.response?.data?.error) {
+        setError(err.response.data.error);
+      } else if (err.response?.data?.message) {
+        setError(err.response.data.message);
+      } else if (err.message) {
+        setError(err.message);
+      } else {
+        setError("Signup failed");
+      }
     }
   };
 
   return (
-    <div style={styles.page}>
-      <div style={styles.card}>
-        <h1 style={styles.heading}>Create your account</h1>
-        <p style={styles.subText}>
+    <div className={styles.page}>
+      <div className={styles.card}>
+        <h1 className={styles.heading}>Create your account</h1>
+        <p className={styles.subText}>
           Start learning, analyzing, and exploring markets
         </p>
 
         <form onSubmit={handleSubmit}>
-          <div style={styles.field}>
+          <div className={styles.field}>
             <label>Email</label>
             <input
               type="email"
@@ -62,11 +62,11 @@ function SignupPage() {
               value={formData.email}
               onChange={handleChange}
               required
-              style={styles.input}
+              className={styles.input}
             />
           </div>
 
-          <div style={styles.field}>
+          <div className={styles.field}>
             <label>Username</label>
             <input
               type="text"
@@ -74,11 +74,11 @@ function SignupPage() {
               value={formData.username}
               onChange={handleChange}
               required
-              style={styles.input}
+              className={styles.input}
             />
           </div>
 
-          <div style={styles.field}>
+          <div className={styles.field}>
             <label>Password</label>
             <input
               type="password"
@@ -86,22 +86,20 @@ function SignupPage() {
               value={formData.password}
               onChange={handleChange}
               required
-              style={styles.input}
+              className={styles.input}
             />
           </div>
 
           <button
             type="submit"
-            style={styles.button}
-            onMouseEnter={(e) => handleHover(e, "enter")}
-            onMouseLeave={(e) => handleHover(e, "leave")}
+            className={styles.button}
           >
             Create Account
           </button>
         </form>
 
-        {message && <p style={styles.success}>{message}</p>}
-        {error && <p style={styles.error}>{error}</p>}
+        {message && <p className={styles.success}>{message}</p>}
+        {error && <p className={styles.error}>{error}</p>}
       </div>
     </div>
   );

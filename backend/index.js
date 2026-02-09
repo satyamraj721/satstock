@@ -4,12 +4,30 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 5000;
 
 /* =======================
    MIDDLEWARE
 ======================= */
-app.use(cors());
+const defaultCorsOrigins = [
+  "http://localhost:3000",
+  "https://satstock-xo91.vercel.app",
+  "https://satstock-gamma.vercel.app",
+];
+
+const allowedOrigins = (
+  process.env.CORS_ORIGIN || defaultCorsOrigins.join(",")
+)
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 /* =======================
@@ -98,4 +116,5 @@ app.post("/signup", async (req, res) => {
 ======================= */
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+  console.log(`CORS allowed origins: ${allowedOrigins.join(", ")}`);
 });
