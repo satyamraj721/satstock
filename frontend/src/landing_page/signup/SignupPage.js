@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import styles from "./SignupPage.module.css";
 
 function SignupPage() {
   const [formData, setFormData] = useState({
@@ -33,48 +34,48 @@ function SignupPage() {
   };
 
   return (
-    <div style={{ padding: "20px", maxWidth: "400px", margin: "auto" }}>
+    <div className={styles.container}>
       <h1>Signup</h1>
       <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: "10px" }}>
-          <label>Email:</label>
+        <div className={styles.field}>
+          <label className={styles.label}>Email:</label>
           <input
             type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
             required
-            style={{ width: "100%", padding: "8px" }}
+            className={styles.input}
           />
         </div>
-        <div style={{ marginBottom: "10px" }}>
-          <label>Username:</label>
+        <div className={styles.field}>
+          <label className={styles.label}>Username:</label>
           <input
             type="text"
             name="username"
             value={formData.username}
             onChange={handleChange}
             required
-            style={{ width: "100%", padding: "8px" }}
+            className={styles.input}
           />
         </div>
-        <div style={{ marginBottom: "10px" }}>
-          <label>Password:</label>
+        <div className={styles.field}>
+          <label className={styles.label}>Password:</label>
           <input
             type="password"
             name="password"
             value={formData.password}
             onChange={handleChange}
             required
-            style={{ width: "100%", padding: "8px" }}
+            className={styles.input}
           />
         </div>
-        <button type="submit" style={{ padding: "10px 20px" }}>
+        <button type="submit" className={styles.submitButton}>
           Signup
         </button>
       </form>
-      {message && <p style={{ color: "green" }}>{message}</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {message && <p className={styles.successMessage}>{message}</p>}
+      {error && <p className={styles.errorMessage}>{error}</p>}
     </div>
   );
 }
