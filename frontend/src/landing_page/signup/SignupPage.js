@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function SignupPage() {
+  const apiBaseUrl =
+    process.env.REACT_APP_API_URL || "http://localhost:5000";
   const [formData, setFormData] = useState({
     email: "",
     username: "",
@@ -22,14 +24,22 @@ function SignupPage() {
 
     try {
       const response = await axios.post(
-        "https://satstock.onrender.com/signup",
+        `${apiBaseUrl}/signup`,
         formData
       );
 
       setMessage(response.data.message);
       setFormData({ email: "", username: "", password: "" });
     } catch (err) {
-      setError(err.response?.data?.error || "Signup failed");
+      if (err.response?.data?.error) {
+        setError(err.response.data.error);
+      } else if (err.response?.data?.message) {
+        setError(err.response.data.message);
+      } else if (err.message) {
+        setError(err.message);
+      } else {
+        setError("Signup failed");
+      }
     }
   };
 
