@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import styles from "./SignupPage.module.css";
 
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://satstock.onrender.com";
+
 function SignupPage() {
   const [formData, setFormData] = useState({
     email: "",
@@ -26,11 +28,7 @@ function SignupPage() {
     setLoading(true);
 
     try {
-      const response = await axios.post(
-        `${process.env.REACT_APP_API_URL}/signup`,
-        formData
-      );
-
+      const response = await axios.post(`${API_BASE_URL}/signup`, formData);
       setMessage(response.data.message || "Signup successful");
       setFormData({ email: "", username: "", password: "" });
     } catch (err) {
@@ -42,11 +40,10 @@ function SignupPage() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>Signup</h1>
-
+      <h1 className={styles.title}>Signup</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.field}>
-          <label className={styles.label}>Email</label>
+          <label className={styles.label}>Email:</label>
           <input
             type="email"
             name="email"
@@ -56,9 +53,8 @@ function SignupPage() {
             className={styles.input}
           />
         </div>
-
         <div className={styles.field}>
-          <label className={styles.label}>Username</label>
+          <label className={styles.label}>Username:</label>
           <input
             type="text"
             name="username"
@@ -68,9 +64,8 @@ function SignupPage() {
             className={styles.input}
           />
         </div>
-
         <div className={styles.field}>
-          <label className={styles.label}>Password</label>
+          <label className={styles.label}>Password:</label>
           <input
             type="password"
             name="password"
@@ -80,7 +75,6 @@ function SignupPage() {
             className={styles.input}
           />
         </div>
-
         <button
           type="submit"
           className={styles.submitButton}
@@ -89,7 +83,6 @@ function SignupPage() {
           {loading ? "Signing up..." : "Signup"}
         </button>
       </form>
-
       {message && <p className={styles.successMessage}>{message}</p>}
       {error && <p className={styles.errorMessage}>{error}</p>}
     </div>
