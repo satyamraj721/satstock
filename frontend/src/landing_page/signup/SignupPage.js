@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function SignupPage() {
-  const apiBaseUrl =
-    process.env.REACT_APP_API_URL || "http://localhost:5000";
+  const resolvedApiBaseUrl =
+    process.env.REACT_APP_API_URL ||
+    (window.location.hostname === "localhost"
+      ? "http://localhost:5000"
+      : "https://satstock.onrender.com");
   const [formData, setFormData] = useState({
     email: "",
     username: "",
@@ -24,7 +27,7 @@ function SignupPage() {
 
     try {
       const response = await axios.post(
-        `${apiBaseUrl}/signup`,
+        `${resolvedApiBaseUrl}/signup`,
         formData
       );
 

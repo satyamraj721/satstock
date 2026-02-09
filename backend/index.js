@@ -9,8 +9,14 @@ const PORT = process.env.PORT || 5000;
 /* =======================
    MIDDLEWARE
 ======================= */
+const defaultCorsOrigins = [
+  "http://localhost:3000",
+  "https://satstock-xo91.vercel.app",
+  "https://satstock-gamma.vercel.app",
+];
+
 const allowedOrigins = (
-  process.env.CORS_ORIGIN || "http://localhost:3000"
+  process.env.CORS_ORIGIN || defaultCorsOrigins.join(",")
 )
   .split(",")
   .map((origin) => origin.trim())
