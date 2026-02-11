@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import styles from "./SignupPage.module.css";
 
 const API_BASE_URL = process.env.REACT_APP_API_URL || "https://satstock.onrender.com";
 
@@ -39,52 +38,67 @@ function SignupPage() {
   };
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Signup</h1>
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <div className={styles.field}>
-          <label className={styles.label}>Email:</label>
+    <div style={{ maxWidth: '420px', margin: '60px auto', padding: '24px', background: '#ffffff', borderRadius: '8px', boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)' }}>
+      <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Signup</h1>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column' }}>
+        <div style={{ marginBottom: '14px' }}>
+          <label style={{ fontWeight: '600', marginBottom: '6px', display: 'block' }}>Email:</label>
           <input
             type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
             required
-            className={styles.input}
+            style={{ width: '100%', padding: '10px', borderRadius: '6px', border: '1px solid #ccc', outline: 'none' }}
+            onFocus={(e) => e.target.style.borderColor = '#2563eb'}
+            onBlur={(e) => e.target.style.borderColor = '#ccc'}
           />
         </div>
-        <div className={styles.field}>
-          <label className={styles.label}>Username:</label>
+        <div style={{ marginBottom: '14px' }}>
+          <label style={{ fontWeight: '600', marginBottom: '6px', display: 'block' }}>Username:</label>
           <input
             type="text"
             name="username"
             value={formData.username}
             onChange={handleChange}
             required
-            className={styles.input}
+            style={{ width: '100%', padding: '10px', borderRadius: '6px', border: '1px solid #ccc', outline: 'none' }}
+            onFocus={(e) => e.target.style.borderColor = '#2563eb'}
+            onBlur={(e) => e.target.style.borderColor = '#ccc'}
           />
         </div>
-        <div className={styles.field}>
-          <label className={styles.label}>Password:</label>
+        <div style={{ marginBottom: '14px' }}>
+          <label style={{ fontWeight: '600', marginBottom: '6px', display: 'block' }}>Password:</label>
           <input
             type="password"
             name="password"
             value={formData.password}
             onChange={handleChange}
             required
-            className={styles.input}
+            style={{ width: '100%', padding: '10px', borderRadius: '6px', border: '1px solid #ccc', outline: 'none' }}
+            onFocus={(e) => e.target.style.borderColor = '#2563eb'}
+            onBlur={(e) => e.target.style.borderColor = '#ccc'}
           />
         </div>
         <button
           type="submit"
-          className={styles.submitButton}
+          style={{
+            marginTop: '10px',
+            padding: '10px',
+            background: loading ? '#93c5fd' : '#2563eb',
+            color: 'white',
+            border: 'none',
+            borderRadius: '6px',
+            fontWeight: '600',
+            cursor: loading ? 'not-allowed' : 'pointer'
+          }}
           disabled={loading}
         >
           {loading ? "Signing up..." : "Signup"}
         </button>
       </form>
-      {message && <p className={styles.successMessage}>{message}</p>}
-      {error && <p className={styles.errorMessage}>{error}</p>}
+      {message && <p style={{ marginTop: '15px', color: 'green', textAlign: 'center' }}>{message}</p>}
+      {error && <p style={{ marginTop: '15px', color: 'red', textAlign: 'center' }}>{error}</p>}
     </div>
   );
 }
